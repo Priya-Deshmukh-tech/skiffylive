@@ -1110,7 +1110,27 @@
     .projects-list {
       display: flex;
       flex-direction: column;
-      gap: 2px
+      gap: 2px;
+      height: 520px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      padding-right: 10px;
+      scrollbar-gutter: stable;
+      scrollbar-width: thin;
+      scrollbar-color: var(--gold) rgba(201, 168, 76, .08);
+    }
+
+    .projects-list::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .projects-list::-webkit-scrollbar-track {
+      background: rgba(201, 168, 76, .08);
+    }
+
+    .projects-list::-webkit-scrollbar-thumb {
+      background: var(--gold);
+      border-radius: 0;
     }
 
     .project-item {
@@ -1537,7 +1557,10 @@
       letter-spacing: .03em;
       color: var(--ink);
       margin-bottom: 48px;
-      position: relative
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      overflow: visible;
     }
 
     .cta-title em {
@@ -1879,7 +1902,7 @@
       .hero-title {
         font-size: clamp(48px, 14vw, 104px);
         line-height: .9;
-        letter-spacing: .01em;
+        letter-spacing: .01em
       }
 
       .hero-sub {
@@ -1925,6 +1948,10 @@
 
       .services-grid {
         grid-template-columns: 1fr
+      }
+
+      .projects-list {
+        height: 470px;
       }
 
       .project-item {
@@ -2252,7 +2279,7 @@
         <div class="about-img-fill" id="aboutParallax"></div>
       </div>
       <div class="about-accent"></div>
-      <div class="about-tag">Est. 2017</div>
+      <div class="about-tag">Est. 2025</div>
     </div>
   </section>
 
@@ -2354,37 +2381,65 @@
       <div class="project-item">
         <div class="proj-line"></div>
         <div class="proj-num">001</div>
-        <div class="proj-name">Lumière Cosmetics</div>
-        <div class="proj-cat">Brand · Web · Motion</div>
-        <div class="proj-year">2025</div>
+        <div class="proj-name">AGT Fashion &amp; Retail</div>
+        <div class="proj-cat">Fashion &amp; Retail</div>
+        <div class="proj-year">2026</div>
       </div>
       <div class="project-item">
         <div class="proj-line"></div>
         <div class="proj-num">002</div>
-        <div class="proj-name">Aether Architecture</div>
-        <div class="proj-cat">Identity · Digital</div>
-        <div class="proj-year">2025</div>
+        <div class="proj-name">Spark Facilities</div>
+        <div class="proj-cat">Facility Management</div>
+        <div class="proj-year">2026</div>
       </div>
       <div class="project-item">
         <div class="proj-line"></div>
         <div class="proj-num">003</div>
-        <div class="proj-name">Verdant Finance</div>
-        <div class="proj-cat">UI/UX · Strategy</div>
-        <div class="proj-year">2024</div>
+        <div class="proj-name">Triune Insights</div>
+        <div class="proj-cat">Market Research</div>
+        <div class="proj-year">2026</div>
       </div>
       <div class="project-item">
         <div class="proj-line"></div>
         <div class="proj-num">004</div>
-        <div class="proj-name">Nova Hospitality Group</div>
-        <div class="proj-cat">Brand · Web · Campaign</div>
-        <div class="proj-year">2024</div>
+        <div class="proj-name">GreenZip Foods</div>
+        <div class="proj-cat">Food &amp; FMCG</div>
+        <div class="proj-year">2026</div>
       </div>
       <div class="project-item">
         <div class="proj-line"></div>
         <div class="proj-num">005</div>
-        <div class="proj-name">Solstice Fashion House</div>
-        <div class="proj-cat">Identity · Motion</div>
-        <div class="proj-year">2023</div>
+        <div class="proj-name">Taksh Steel</div>
+        <div class="proj-cat">Industrial &amp; Steel</div>
+        <div class="proj-year">2026</div>
+      </div>
+      <div class="project-item">
+        <div class="proj-line"></div>
+        <div class="proj-num">006</div>
+        <div class="proj-name">SK Infrastructure</div>
+        <div class="proj-cat">Infrastructure</div>
+        <div class="proj-year">2026</div>
+      </div>
+      <div class="project-item">
+        <div class="proj-line"></div>
+        <div class="proj-num">007</div>
+        <div class="proj-name">Sarthi NGO</div>
+        <div class="proj-cat">NGO &amp; Social</div>
+        <div class="proj-year">2026</div>
+      </div>
+      <div class="project-item">
+        <div class="proj-line"></div>
+        <div class="proj-num">008</div>
+        <div class="proj-name">Carbon Leaf</div>
+        <div class="proj-cat">Sustainability</div>
+        <div class="proj-year">2026</div>
+      </div>
+      <div class="project-item">
+        <div class="proj-line"></div>
+        <div class="proj-num">009</div>
+        <div class="proj-name">Happy Journey Taxi Service</div>
+        <div class="proj-cat">Transport &amp; Mobility</div>
+        <div class="proj-year">2026</div>
       </div>
     </div>
   </section>
@@ -2431,59 +2486,63 @@
 
     <div class="testi-carousel">
       <div class="testi-track" id="testiTrack">
-
         <div class="testi-slide">
-          <p class="testimonial-text">"Skiffy didn't just redesign our website — they <em>reinvented</em> how the world
-            sees our brand. The results were beyond anything we imagined."</p>
+          <p class="testimonial-text">"Really happy with our experience with Skiffy. The team understood our
+            requirements well, communicated clearly throughout the project, and delivered a clean and professional
+            website. They were responsive whenever we needed changes or had questions. Overall, a smooth and satisfying
+            experience. Definitely recommended!"</p>
           <div class="testimonial-author">
             <div class="author-line"></div>
             <div>
-              <div class="author-name">Alexandra Voss</div>
-              <div class="author-role">CEO, Lumière Cosmetics</div>
+              <div class="author-name">Akshay Chavda</div>
+              <div class="author-role">Founder - Saarthi For NGOs</div>
             </div>
             <div class="author-line"></div>
           </div>
         </div>
 
         <div class="testi-slide">
-          <p class="testimonial-text">"Working with Skiffy felt like collaborating with <em>artists</em> who happened to
-            be brilliant engineers. They elevated every aspect of our digital identity."</p>
+          <p class="testimonial-text">"I’m really happy with the website design and development. Everything was done
+            professionally, exactly the way I wanted, and the quality of the work is excellent. What I liked most was
+            the 24×7 support — whenever I had a question or needed a change, they were always available and quick to
+            respond. Highly recommended for anyone looking for a reliable website designer and developer."</p>
           <div class="testimonial-author">
             <div class="author-line"></div>
             <div>
-              <div class="author-name">Marcus Chen</div>
-              <div class="author-role">Founder, Aether Architecture</div>
+              <div class="author-name">Kotadiya Prince</div>
+              <div class="author-role">Owner, GreenZip Foods</div>
             </div>
             <div class="author-line"></div>
           </div>
         </div>
 
         <div class="testi-slide">
-          <p class="testimonial-text">"The attention to detail was <em>extraordinary</em>. Every micro-interaction,
-            every transition — it all felt intentional and deeply considered."</p>
+          <p class="testimonial-text">"I got my website www.raabtafashion.in developed through them, and my overall
+            experience was excellent. They understood my requirements properly and developed the website exactly
+            according to my expectations. The team was professional, responsive, and supportive throughout the process.
+            I am very satisfied with their work and would definitely recommend them to anyone looking for website
+            development services."</p>
           <div class="testimonial-author">
             <div class="author-line"></div>
             <div>
-              <div class="author-name">Sophia Laurent</div>
-              <div class="author-role">CMO, Nova Hospitality Group</div>
+              <div class="author-name">Rajesh Chaudhary</div>
+              <div class="author-role">Proprietor, Raabta Fashion</div>
             </div>
             <div class="author-line"></div>
           </div>
         </div>
 
         <div class="testi-slide">
-          <p class="testimonial-text">"Skiffy transformed our brand from invisible to <em>unmissable</em>. Our
-            conversions tripled within the first quarter after launch."</p>
+          <p class="testimonial-text">"good skills and services on web design"</p>
           <div class="testimonial-author">
             <div class="author-line"></div>
             <div>
-              <div class="author-name">James Okafor</div>
-              <div class="author-role">Director, Verdant Finance</div>
+              <div class="author-name">Sangamesh Chitti</div>
+              <div class="author-role">Owner, Raktachetan</div>
             </div>
             <div class="author-line"></div>
           </div>
         </div>
-
       </div>
 
       <div class="testi-controls">
@@ -2677,6 +2736,7 @@
         }
 
         track.style.transform = `translateX(-${current * 100}%)`;
+        track.style.minHeight = slides[current].offsetHeight + 'px';
 
         // update dots
         dotsWrap.querySelectorAll('.testi-dot').forEach((d, i) => d.classList.toggle('active', i === current));
@@ -2704,6 +2764,9 @@
       });
       track.style.position = 'relative';
       if (slides[0]) track.style.minHeight = slides[0].offsetHeight + 'px';
+      window.addEventListener('resize', () => {
+        if (slides[current]) track.style.minHeight = slides[current].offsetHeight + 'px';
+      });
 
       // start auto play
       goTo(0, true);
@@ -3039,42 +3102,34 @@
       const nodes = Array.from(el.childNodes);
 
       nodes.forEach(node => {
-        if (node.nodeType === Node.TEXT_NODE) {
-          const fragment = document.createDocumentFragment();
+        if (node.nodeType !== Node.TEXT_NODE) return;
 
-          node.textContent.split(/(\s+)/).forEach(part => {
-            if (/^\s+$/.test(part)) {
-              fragment.appendChild(document.createTextNode(part));
-            } else if (part) {
-              const wrap = document.createElement('span');
-              wrap.className = 'word-wrap';
-              wrap.style.cssText = 'display:inline-block;overflow:hidden;vertical-align:top';
+        const fragment = document.createDocumentFragment();
+        node.textContent.split(/(\s+)/).forEach(part => {
+          if (/^\s+$/.test(part)) {
+            fragment.appendChild(document.createTextNode(part));
+          } else if (part) {
+            const wrap = document.createElement('span');
+            wrap.className = 'word-wrap';
+            wrap.style.cssText = 'display:inline-block;overflow:hidden;vertical-align:top';
 
-              const inner = document.createElement('span');
-              inner.className = 'word-inner';
-              inner.style.display = 'inline-block';
-              inner.textContent = part;
+            const inner = document.createElement('span');
+            inner.className = 'word-inner';
+            inner.style.display = 'inline-block';
+            inner.textContent = part;
 
-              wrap.appendChild(inner);
-              fragment.appendChild(wrap);
-            }
-          });
+            wrap.appendChild(inner);
+            fragment.appendChild(wrap);
+          }
+        });
 
-          node.replaceWith(fragment);
-        }
+        node.replaceWith(fragment);
       });
 
       gsap.from(el.querySelectorAll('.word-inner'), {
-        scrollTrigger: {
-          trigger: triggerSelector,
-          start: 'top 78%'
-        },
-        y: '110%',
-        opacity: 0,
-        stagger: .05,
-        duration: 1,
-        ease: 'expo.out',
-        delay: .1
+        scrollTrigger: { trigger: triggerSelector, start: 'top 78%' },
+        y: '110%', opacity: 0,
+        stagger: .05, duration: 1, ease: 'expo.out', delay: .1
       });
     }
   </script>

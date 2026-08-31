@@ -1110,8 +1110,8 @@
     .projects-list {
       display: flex;
       flex-direction: column;
-      gap: 2px;
-      height: 520px;
+      gap: 0;
+      height: 430px;
       overflow-y: scroll;
       overflow-x: hidden;
       padding-right: 10px;
@@ -1135,10 +1135,12 @@
 
     .project-item {
       display: grid;
-      grid-template-columns: 80px 1fr auto auto;
+      grid-template-columns: 80px minmax(0, 1fr) auto 70px;
       align-items: center;
-      gap: 32px;
-      padding: 32px 0;
+      gap: 28px;
+      min-height: 86px;
+      box-sizing: border-box;
+      padding: 22px 0;
       border-bottom: 1px solid rgba(201, 168, 76, .1);
       position: relative;
       cursor: pointer;
@@ -1174,10 +1176,12 @@
 
     .proj-name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(24px, 3vw, 40px);
+      font-size: clamp(22px, 2.5vw, 36px);
       font-weight: 300;
       color: var(--cream);
-      line-height: 1;
+      line-height: 1.05;
+      min-width: 0;
+      overflow-wrap: break-word;
       transition: color .3s
     }
 
@@ -1186,15 +1190,18 @@
     }
 
     .proj-cat {
-      font-size: 11px;
-      letter-spacing: .2em;
+      font-size: 10px;
+      letter-spacing: .16em;
+      white-space: nowrap;
       color: var(--fog);
       text-transform: uppercase
     }
 
     .proj-year {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 20px;
+      font-size: 18px;
+      text-align: right;
+      white-space: nowrap;
       color: rgba(201, 168, 76, .3);
       letter-spacing: .08em
     }
@@ -1402,18 +1409,26 @@
 
     .testi-slide {
       min-width: 100%;
+      height: 420px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 0 20px
+      padding: 32px 28px
     }
 
     .testimonial-text {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(20px, 3.5vw, 44px);
+      width: 100%;
+      max-width: 780px;
+      font-size: clamp(18px, 2.2vw, 30px);
       font-weight: 300;
       font-style: italic;
-      line-height: 1.4;
+      line-height: 1.45;
       color: var(--cream);
-      margin-bottom: 48px
+      margin: 0 auto 32px;
     }
 
     .testimonial-text em {
@@ -1900,9 +1915,9 @@
       }
 
       .hero-title {
-        font-size: clamp(48px, 14vw, 104px);
+        font-size: clamp(46px, 13.2vw, 104px);
         line-height: .9;
-        letter-spacing: .01em
+        letter-spacing: .005em
       }
 
       .hero-sub {
@@ -1951,11 +1966,39 @@
       }
 
       .projects-list {
-        height: 470px;
+        height: 410px;
+        padding-right: 8px;
       }
 
       .project-item {
-        grid-template-columns: 50px 1fr
+        grid-template-columns: 50px minmax(0, 1fr);
+        min-height: 82px;
+        padding: 20px 0;
+      }
+
+      .proj-name {
+        font-size: clamp(20px, 6vw, 30px);
+        line-height: 1.05;
+      }
+
+      .testi-slide {
+        height: 440px;
+        padding: 28px 18px;
+      }
+
+      .testimonial-text {
+        max-width: 340px;
+        font-size: 18px;
+        line-height: 1.45;
+        margin-bottom: 28px;
+      }
+
+      .testimonial-author {
+        gap: 12px;
+      }
+
+      .author-line {
+        width: 28px;
       }
 
       .proj-cat,
